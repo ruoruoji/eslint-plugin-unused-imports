@@ -1,17 +1,18 @@
 {
-	"name": "eslint-plugin-unused-imports",
-	"version": "2.0.0",
+	"name": "eslint-plugin-unused-vars",
+	"version": "0.0.1",
 	"description": "Report and remove unused es6 modules",
 	"keywords": [
 		"eslint",
 		"eslintplugin",
 		"eslint-plugin",
-		"import",
 		"unused",
+		"vars",
+		"import",
 		"modules",
 		"autofix"
 	],
-	"author": "Mikkel Holmer Pedersen",
+	"author": "Quan Sun",
 	"main": "lib/index.js",
 	"scripts": {
 		"test": "jest"
@@ -38,7 +39,7 @@
 		"node": "^12.22.0 || ^14.17.0 || >=16.0.0"
 	},
 	"license": "MIT",
-	"repository": "https://github.com/sweepline/eslint-plugin-unused-imports",
-	"homepage": "https://github.com/sweepline/eslint-plugin-unused-imports",
-	"bugs": "https://github.com/sweepline/eslint-plugin-unused-imports/issues"
+	"repository": "https://github.com/ruoruoji/eslint-plugin-unused-imports",
+	"homepage": "https://github.com/ruoruoji/eslint-plugin-unused-imports",
+	"bugs": "https://github.com/ruoruoji/eslint-plugin-unused-imports/issues"
 }

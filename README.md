@@ -1,4 +1,4 @@
-# eslint-plugin-unused-imports
+# eslint-plugin-unused-vars
 
 Find and remove unused es6 module imports. It works by splitting up the `no-unused-vars` rule depending on it being an import statement in the AST and providing an autofix rule to remove the nodes if they are imports. This plugin composes the rule `no-unused-vars` of either the typescript or js plugin so be aware that the other plugins needs to be installed and reporting correctly for this to do so.
 
@@ -27,21 +27,21 @@ You'll first need to install [ESLint](http://eslint.org) (and [@typescript-eslin
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-unused-imports`:
+Next, install `eslint-plugin-unused-vars`:
 
 ```bash
-npm install eslint-plugin-unused-imports --save-dev
+npm install eslint-plugin-unused-vars --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-unused-imports` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-unused-vars` globally.
 
 ## Usage
 
-Add `unused-imports` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `unused-vars` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-	"plugins": ["unused-imports"]
+  "plugins": ["unused-vars"]
 }
 ```
 
@@ -49,14 +49,19 @@ Then configure the rules you want to use under the rules section. I can recommen
 
 ```json
 {
-	"rules": {
-		"no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
-		"unused-imports/no-unused-imports": "error",
-		"unused-imports/no-unused-vars": [
-			"warn",
-			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-		]
-	}
+  "rules": {
+    "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+    "unused-vars/no-unused-imports": "error",
+    "unused-vars/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
 }
 ```
 
