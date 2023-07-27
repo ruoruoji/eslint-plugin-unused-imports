@@ -1,6 +1,6 @@
 # eslint-plugin-unused-vars
 
-Find and remove unused es6 module imports. It works by splitting up the `no-unused-vars` rule depending on it being an import statement in the AST and providing an autofix rule to remove the nodes if they are imports. This plugin composes the rule `no-unused-vars` of either the typescript or js plugin so be aware that the other plugins needs to be installed and reporting correctly for this to do so.
+Find and remove unused es6 module imports and vars. It works by splitting up the `no-unused-vars` rule depending on it being an import statement in the AST and providing an autofix rule to remove the nodes if they are unused. This plugin composes the rule `no-unused-vars` of either the typescript or js plugin so be aware that the other plugins needs to be installed and reporting correctly for this to do so.
 
 ## _Version 2.0_
 
@@ -55,6 +55,7 @@ Then configure the rules you want to use under the rules section. I can recommen
     "unused-vars/no-unused-vars": [
       "warn",
       {
+        "autoFix": false, // disable auto fix
         "vars": "all",
         "varsIgnorePattern": "^_",
         "args": "after-used",
@@ -64,8 +65,3 @@ Then configure the rules you want to use under the rules section. I can recommen
   }
 }
 ```
-
-## Supported Rules
-
-- `no-unused-imports`
-- `no-unused-vars`
